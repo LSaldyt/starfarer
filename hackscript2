@@ -1,7 +1,0 @@
-#!/usr/bin/env python3
-import pyautogui as p
-from time import sleep
-
-hacker_txt = 'sex'
-p.click(787,768)
-p.typewrite('asdlfjalsdkfja;sldkfadsflk:wq')
