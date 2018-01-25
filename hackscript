@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+import webbrowser
+import pyautogui as p
+from time import sleep
+
+for i in range(10):
+    webbrowser.open('https://www.mecontacts.com/me/signup/index.php')
+    sleep(1)
+    hacker_txt = 'sex' + str(i)
+    p.click(918,429)
+    for _ in range(10):
+        p.typewrite(hacker_txt)
+        p.press('tab')
+    #x:1244 y:870 
+    p.click(1244,870)
+    #p.press('enter')
