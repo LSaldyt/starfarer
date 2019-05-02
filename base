@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+import sys
+import pyautogui as p
+from time import sleep
+
+def main(args):
+    sleep(1)
+    hacker_txt = 'This text was written by a bot!' + str(i)
+    p.click(918,429)
+    p.typewrite(hacker_txt)
+    p.press('enter')
+    p.click(1244,870)
+    return 0
+
+if __name__ == '__main__':
+    sys.exit(main(sys.argv[1:]))
