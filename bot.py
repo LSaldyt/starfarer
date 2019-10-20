@@ -1,5 +1,5 @@
 from control import write, press, combo, click
-import subprocess
+import subprocess, sys
 
 class Bot:
     def __init__(self):
