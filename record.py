@@ -1,4 +1,5 @@
 import keyboard  as k
+import mouse as m
 import pyautogui as p
 
 from time import sleep
@@ -8,17 +9,17 @@ image_directory = 'frames'
 
 def record():
     k.start_recording()
-    mouse = []
+    positions = []
     i = 0
     while True:
-        mouse.append(p.position())
+        positions.append((m.X, m.X2, m.is_pressed(button='left'), m.is_pressed(button='right'), m.is_pressed(button='middle')))
         p.screenshot('frames/{}.png'.format(i))
-        sleep(sample_rate)
-        if k.is_pressed('f12'):
+        if k.is_pressed('escape'):
             break
+        sleep(sample_rate)
         i += 1
     keys = k.stop_recording()
-    print(mouse)
+    print(positions)
     print(keys)
 
 record()
